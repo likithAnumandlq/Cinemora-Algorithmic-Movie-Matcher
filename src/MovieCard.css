@@ -1,0 +1,67 @@
+.card {
+  width: 280px;
+  height: 420px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #1a1a1a;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 229, 255, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+.card:hover img {
+  filter: brightness(0.3) blur(2px);
+}
+
+/* The overlay is hidden by default (opacity: 0) */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+  opacity: 0; 
+  transition: opacity 0.4s ease;
+}
+
+/* It becomes visible when the card is hovered */
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  color: #fff;
+  margin: 0 0 10px 0;
+  font-size: 1.5rem;
+}
+
+.overlay p {
+  color: #00E5FF;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+.tags {
+  color: #ccc;
+  font-size: 0.9rem;
+}

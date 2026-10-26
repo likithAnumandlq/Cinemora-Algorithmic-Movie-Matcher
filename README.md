@@ -1,4 +1,4 @@
-# Content-Based Movie Recommendation System 🎬
+# Cinemora: Algorithmic Movie Matcher & UI🎬
 
 This project is a movie recommendation system built in Python using Google Colab. It uses a content-based filtering approach to recommend movies based on their genres.
 
